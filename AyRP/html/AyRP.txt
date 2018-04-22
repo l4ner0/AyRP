@@ -1,0 +1,38 @@
+
+###########
+ A.y.R.P
+###########
+	
+
+----------------------------------------------------------|
+	Análisis y Registro de Puntaje	  		  |
+----------------------------------------------------------|
+							  |	
+	<> Requerimientos funcionales:			  |
+							  |
+		->Manejo de usuarios			  |
+							  |
+		->Análisis de puntaje		  	  |
+							  |
+		->CRUD de puntaje			  |
+							  |
+		->Elaboración de cédulas de respuesta	  |
+							  |	
+		->Elaboración de formularios de respuesta |
+							  |
+							  |
+							  |
+	<> Requerimientos no funcionales:		  |
+							  |
+-----------------------------------------------------------
+
+
+	Modulos de SAyRP 
+	
+	-> Módulo de usuario
+
+	-> Módulo Análisis de Puntaje
+
+
+	
+
