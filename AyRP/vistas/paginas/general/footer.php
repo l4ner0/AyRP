@@ -53,3 +53,4 @@
 <!-- AdminLTE for demo purposes -->
 <script src="<?php echo HTML_DIR; ?>dist/js/demo.js"></script>
 <script src="<?php echo HTML_DIR; ?>dist/js/pages/perfiles.js"></script>
+

@@ -1,5 +1,5 @@
 <?php
 
-	echo "Upss!! no hemos encontrado el archivo ".$_GET['view'];
+	include("vistas/paginas/404/404.php");
 
 ?>

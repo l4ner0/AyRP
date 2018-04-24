@@ -55,7 +55,7 @@ $(document).on('click', '.number-spinner button', function () {
         HTML+='    <span class="input-group-btn">'
         HTML+='      <button class="btn btn-default" onclick=" return false" data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>'
         HTML+='    </span>'
-        HTML+='    <input type="text" class="form-control text-center" value="0" id="cantMaterias">'
+        HTML+='    <input type="text" class="form-control text-center" value="0" id="nPregMat'+i+'">'
         HTML+='    <span class="input-group-btn">'
         HTML+='     <button class="btn btn-default" onclick=" return false" data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>'
         HTML+='    </span>'
@@ -72,6 +72,11 @@ $(document).on('click', '.number-spinner button', function () {
     function crearPerfil(){
       var resultHTML="";
 
+               
+
+                
+                  
+              
       
 
       resultHTML+='          <div class="col-md-7">';
@@ -81,14 +86,16 @@ $(document).on('click', '.number-spinner button', function () {
       resultHTML+='          <h3 class="box-title">Crear Perfil</h3>';
       resultHTML+='        </div>';
       resultHTML+='        <form role="form">';
+      resultHTML+='          <div id="alerta_perfil">';
+      resultHTML+='          </div>';
       resultHTML+='          <div class="box-body">';
       resultHTML+='            <div class="form-group">';
       resultHTML+='              <label for="nombre_perfil">Nombre del Perfil</label>';
       resultHTML+='              <input type="text" class="form-control" id="nombre_perfil" placeholder="Ingrese un nombre">';
       resultHTML+='            </div>';
       resultHTML+='            <div class="form-group">';
-      resultHTML+='              <label for="cantidad_materia">Cantidad de Materias</label>';
-      resultHTML+='              <div class="input-group number-spinner" id="cantidad_materia">';
+      resultHTML+='              <label for="cantidad_materias">Cantidad de Materias</label>';
+      resultHTML+='              <div class="input-group number-spinner">';
       resultHTML+='                <span class="input-group-btn" onclick="bajar()">'
       resultHTML+='                  <button class="btn btn-default" onclick=" return false" data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>';
       resultHTML+='                </span>';
@@ -114,11 +121,13 @@ $(document).on('click', '.number-spinner button', function () {
       resultHTML+='          </div>';
       resultHTML+='          <!-- /.box-body -->';
       resultHTML+='          <div class="box-footer">';
-      resultHTML+='            <a role="button" href="?view=perfiles" class="btn btn-primary">Crear</a>';
+      resultHTML+='            <input type="button" href="?view=perfiles" class="btn btn-primary" onclick="nuevoPerfil()" value="Crear"></input>';
+      resultHTML+='            <a role="button" href="?view=perfiles" class="btn btn-primary pull-right">Salir</a>';
       resultHTML+='          </div>';
       resultHTML+='        </form>';
       resultHTML+='      </div>';
       resultHTML+='    </div>';
+
 
 
 

@@ -12,6 +12,11 @@
 			case 'reg':
 				require_once ('nucleo/controladores/script/registroControlador.php');
 				break;
+
+			case 'perfiles':
+				require_once ('nucleo/controladores/script/perfilesControlador.php');
+				break;
+
 			default:
 				header ('location: index.php');
 				break;
