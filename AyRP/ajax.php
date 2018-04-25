@@ -13,8 +13,12 @@
 				require_once ('nucleo/controladores/script/registroControlador.php');
 				break;
 
-			case 'perfiles':
-				require_once ('nucleo/controladores/script/perfilesControlador.php');
+			case 'crearPerfil':
+				require_once ('nucleo/controladores/script/crearPerfilesControlador.php');
+				break;
+
+			case 'elegirPerfil':
+				require_once ('nucleo/controladores/script/elegirPerfilesControlador.php');
 				break;
 
 			default:

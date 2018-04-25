@@ -2,7 +2,7 @@
     <div class="pull-right hidden-xs">
       <b>Versión</b> 1.0.0
     </div>
-    <strong>Copyright &copy; 2018 Diego Urbina.</strong> Todos los derechos reservados.
+    <?php echo APP_COPY; ?>
   </footer>
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
@@ -52,5 +52,5 @@
 
 <!-- AdminLTE for demo purposes -->
 <script src="<?php echo HTML_DIR; ?>dist/js/demo.js"></script>
-<script src="<?php echo HTML_DIR; ?>dist/js/pages/perfiles.js"></script>
+<script src="vistas/js/perfiles.js"></script>
 

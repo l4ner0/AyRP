@@ -136,7 +136,7 @@
     <div class="pull-right hidden-xs">
       <b>Versión</b> 1.0.0
     </div>
-    <strong>Copyright &copy; 2018 Diego Urbina.</strong> Todos los derechos reservados.
+    <?php echo APP_COPY;?>
   </footer>
 
 

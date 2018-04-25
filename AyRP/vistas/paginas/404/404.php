@@ -83,12 +83,12 @@
       echo '<br>';
       echo '<br>';
       echo '<br>';
-      echo '<script  src="'.HTML_DIR.'dist/js/404.js"></script>';
+      echo '<script  src="vistas/js/404.js"></script>';
        include("vistas/paginas/general/footer.php");
 
     }else{
 
-      echo '<script  src="'.HTML_DIR.'dist/js/404.js"></script>';
+      echo '<script  src="vistas/js/404.js"></script>';
 
     }
 

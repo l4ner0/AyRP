@@ -71,13 +71,13 @@
 			return $estado;
 		}
 
-		public function obtener_perfiles(){
+		public function obtener_perfiles($idUsuario){
 
 			$materias=null;
 
 			$db = new Conexion();
 
-			$sql=$db->query("SELECT * FROM perfiles_examen;");
+			$sql=$db->query("SELECT * FROM perfiles_examen WHERE id_usuario='$idUsuario';");
 
 
 			if($db->rows($sql) > 0){
@@ -114,15 +114,37 @@
 
 		public function obtener_perfil($idPerfil){
 
+			$data=array();
+
+			$db = new Conexion();
+
+			$sql=$db->query("SELECT * FROM perfiles_examen WHERE id_perfil='$idPerfil';");
+
+			if($db->rows($sql) > 0){
+
+				$data=$db->recorrer($sql);
+
+			}else{
+
+				$data=null;
+
+			}
+
+
+			$db->liberar($sql);
+			$db->close();
+					
+			return $data;
+
 		}
 
-		public function obtener_ultimo_perfil(){
+		public function obtener_ultimo_perfil($idUsuario){
 
 			$data=array();
 
 			$db = new Conexion();
 
-			$sql=$db->query("SELECT MAX(id_perfil) AS id_pefil FROM perfiles_examen;");
+			$sql=$db->query("SELECT MAX(id_perfil) AS id_pefil FROM perfiles_examen WHERE id_usuario='$idUsuario';");
 
 			if($db->rows($sql) > 0){
 

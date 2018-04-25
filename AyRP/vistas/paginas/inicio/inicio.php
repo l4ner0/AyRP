@@ -11,12 +11,14 @@
   <!-- Left side column. contains the logo and sidebar -->
   <?php
     include("vistas/paginas/general/sidebar.php");
+    
+    $_SESSION['elegirPerfil']="no";
   ?>
    <div id="MENU">
         <ul class="sidebar-menu" data-widget="tree">
           <li class="header">MENU DE NAVEGACION</li>
-            <li class=" active treeview">
-             <a href="#" onclick="botonInicio()">
+            <li class=" active treeview"  onclick="botonInicio()">
+             <a href="#">
                <i class="fa fa-dashboard"></i> <span>Inicio</span>
              </a>
            </li>
@@ -30,7 +32,6 @@
     </section>
     <!-- /.sidebar -->
   </aside>
-  
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -51,7 +52,7 @@
         <h1 class="display-3">Hola<?php echo " ".$_SESSION['nick_usuario']; ?></h1>
         <p class="lead">Bienvenido al Sistema para el Análisis y Registro de Puntaje</p>
         <hr class="my-4">
-        <p>Con este sistema analizar tus simulacros de una manera comoda y rápido, por el momento contamos con opciones básicas, pero pronto añadiremos mas herramientas.</p>
+        <p>Con este sistema analizar tus simulacros será mas fácil y rápido, por el momento contamos con opciones básicas, pero pronto añadiremos mas herramientas para tu disposición.</p>
       </div>
     </section>
     </section>

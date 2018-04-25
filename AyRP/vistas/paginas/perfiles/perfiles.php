@@ -16,13 +16,13 @@
   <div id="MENU">
         <ul class="sidebar-menu" data-widget="tree">
           <li class="header">MENU DE NAVEGACION</li>
-            <li class="  treeview">
-             <a href="#" onclick="botonInicio()">
+            <li class="  treeview" onclick="botonInicio()">
+             <a href="#">
                <i class="fa fa-dashboard"></i> <span>Inicio</span>
              </a>
            </li>
-          <li class=" active treeview">
-            <a href="#"  onclick="botonPerfil()">
+          <li class=" active treeview" >
+            <a href="#" onclick="botonPerfil()">
               <i class="fa fa-list-ol"></i> <span>Perfiles</span>
             </a>
           </li>
@@ -67,12 +67,12 @@
                   
                   <?php 
 
-                    if(isset($_SESSION['listaPerfiles'])){
+                    if(isset($_SESSION['listaPerfiles']) and $_SESSION['listaPerfiles'] != null){
 
                       $listaPerfiles = $_SESSION['listaPerfiles'];
 
                       
-                      for($i=0; $i < count($listaPerfiles); $i++){
+                      for($i=count($listaPerfiles)-1; $i >= 0 ; $i--){
 
                          echo '<li>
                                   <!-- drag handle -->
@@ -82,7 +82,7 @@
                                       </span>
                                  
                                   <!-- todo text -->
-                                  <span class="text"><a href="#" style="color:black;" >Perfil '.strtoupper($listaPerfiles[$i]['nombre_perfil']).'</a></span>
+                                  <span class="text"><a href="#" onclick="elegirPerfil('.$listaPerfiles[$i]['id_perfil'].')" style="color:black;" >Perfil '.strtoupper($listaPerfiles[$i]['nombre_perfil']).'</a></span>
                                   <!-- Emphasis label -->
                                   <small class=" pull-right label label-danger">'.$listaPerfiles[$i]['fecha'].'</small>
                                   <!-- General tools such as edit or delete-->
@@ -176,14 +176,12 @@
         </div>
         
       </div>
-          <div id="DATOS">
-            
-          </div>
     </section>
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
   <script src="vistas/paginas/perfiles/ajax/nuevoPerfil.js"></script>
+  <script src="vistas/paginas/perfiles/ajax/elegirPerfil.js"></script>
    <?php
     include("vistas/paginas/general/footer.php");
   ?>

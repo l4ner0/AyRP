@@ -4,7 +4,6 @@
 
 	session_start();
 
-
 	/*Constantes  APP*/
 
 	define("APP_TITLE","AyRP");
@@ -14,6 +13,7 @@
 	/*Constantes para las vistas*/
 
 	define("HTML_DIR","html/");
+	define('APP_COPY','&copy; '.date('Y',time()).' Hecho por <b>Almsaeed Studio</b> y modificado por <b>l4ner0</b>');
 
 
 	/*Constantes para conexión*/
@@ -41,7 +41,9 @@
 
 
 	/*Clases requeridos*/
-
+	
+	require("nucleo/modelos/perfiles_examenDAO.php");
+	require_once("nucleo/funciones/listarPerfil.php");
 	require_once('nucleo/modelos/conexion/class.Conexion.php');
 	require('nucleo/funciones/correoTemplate.php');
 	require('nucleo/funciones/enviarCorreo.php');

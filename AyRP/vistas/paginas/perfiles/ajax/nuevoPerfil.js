@@ -8,7 +8,7 @@ function nuevoPerfil(){
 	var cantOpPre=__('cantOpPre').value;
 	var estado;
 
-	var url="ajax.php?mode=perfiles";
+	var url="ajax.php?mode=crearPerfil";
 
 	if (nombrePerfil != "" && cantMaterias != 0 && cantOpPre !=0) {
 
