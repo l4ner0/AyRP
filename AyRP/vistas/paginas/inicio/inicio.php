@@ -27,6 +27,11 @@
               <i class="fa fa-list-ol"></i> <span>Perfiles</span>
             </a>
           </li>
+           <li class="  reeview" >
+            <a href="#" onclick="botonCorrecion()">
+              <i class="fa fa-edit"></i> <span>Correción</span>
+            </a>
+          </li>
         </ul>
       </div>
     </section>

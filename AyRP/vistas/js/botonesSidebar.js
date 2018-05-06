@@ -11,3 +11,10 @@
       location.href="?view=perfiles";
        
     }
+
+
+    function botonCorrecion(){
+     
+      location.href="?view=correcion";
+       
+    }

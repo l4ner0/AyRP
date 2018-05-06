@@ -203,6 +203,30 @@
 			return $materias;
 
 		}
+
+		public function eliminar_perfil($idPerfil){
+
+			$db = new Conexion();
+
+
+			$db->query("DELETE FROM perfiles_examen WHERE id_perfil='$idPerfil';");
+
+			$db->close();
+
+
+		}
+
+		public function editar_perfil($idPerfil,$nombrePerfil,$cantMaterias,$opcionesPregunta,$nombreMateria,$cantPreguntas){
+
+			$db = new Conexion();
+
+			$db->query("UPDATE perfiles_examen SET nombre_perfil='$nombrePerfil',cant_materias='$cantMaterias',opciones_pregunta='$opcionesPregunta' WHERE id_perfil='$idPerfil';");
+
+			$db->query("UPDATE perfiles_examen SET nombre_materia='$nombreMateria',cant_preguntas='$cantPreguntas' WHERE id_perfil='$idPerfil';");
+
+			$db->liberar($sql);
+			$db->close();
+		}
 	}
 
 ?>

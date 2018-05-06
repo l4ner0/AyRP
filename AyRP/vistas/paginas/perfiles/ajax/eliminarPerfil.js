@@ -1,9 +1,13 @@
 
-function elegirPerfil(idPerfil){
+function eliminarPerfil(idPerfil){
 
- 	var url="ajax.php?mode=elegirPerfil";
+	var url="ajax.php?mode=eliminarPerfil";
 
- 		$.ajax({
+	var respuesta=confirm("Seguro que deseas eliminar el perfil");
+
+	if(respuesta){
+		
+		$.ajax({
 
  			type:"post",
  			url:url,
@@ -17,8 +21,12 @@ function elegirPerfil(idPerfil){
 
  			}else{
 
+ 				alert(resp);
+
  			}
  			 
 
  		});		
- }
+	}
+
+}

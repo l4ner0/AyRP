@@ -44,6 +44,7 @@
 	
 	require("nucleo/modelos/perfiles_examenDAO.php");
 	require_once("nucleo/funciones/listarPerfil.php");
+	require_once("nucleo/funciones/listarPerfilCorrecion.php");
 	require_once('nucleo/modelos/conexion/class.Conexion.php');
 	require('nucleo/funciones/correoTemplate.php');
 	require('nucleo/funciones/enviarCorreo.php');

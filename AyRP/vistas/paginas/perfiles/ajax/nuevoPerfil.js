@@ -57,8 +57,6 @@ function nuevoPerfil(){
 
 						__('alerta_perfil').innerHTML=HTML;
 
-						__('DATOS').innerHTML=resp;
-
 						 location.href='./?view=perfiles';
 
 					}

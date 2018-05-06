@@ -26,6 +26,11 @@
               <i class="fa fa-list-ol"></i> <span>Perfiles</span>
             </a>
           </li>
+          <li class="  reeview" >
+            <a href="#" onclick="botonCorrecion()">
+              <i class="fa fa-edit"></i> <span>Correción</span>
+            </a>
+          </li>
         </ul>
       </div>
     </section>
@@ -87,8 +92,7 @@
                                   <small class=" pull-right label label-danger">'.$listaPerfiles[$i]['fecha'].'</small>
                                   <!-- General tools such as edit or delete-->
                                   <div class="tools">
-                                    <i class="fa fa-edit"></i>
-                                    <i class="fa fa-trash-o"></i>
+                                    <i onclick="eliminarPerfil('.$listaPerfiles[$i]['id_perfil'].')" class="fa fa-trash-o"></i>
                                   </div>
                                 </li>';
                         }
@@ -182,6 +186,9 @@
   <!-- /.content-wrapper -->
   <script src="vistas/paginas/perfiles/ajax/nuevoPerfil.js"></script>
   <script src="vistas/paginas/perfiles/ajax/elegirPerfil.js"></script>
+  <script src="vistas/paginas/perfiles/ajax/eliminarPerfil.js"></script>
+  <script src="vistas/paginas/perfiles/ajax/editarPerfil.js"></script>
+
    <?php
     include("vistas/paginas/general/footer.php");
   ?>
