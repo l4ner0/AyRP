@@ -29,7 +29,7 @@
 <script src="<?php echo HTML_DIR; ?>bower_components/raphael/raphael.min.js"></script>
 <script src="<?php echo HTML_DIR; ?>bower_components/morris.js/morris.min.js"></script>
 <!-- Sparkline -->
-<script src="bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+<script src="<?php echo HTML_DIR; ?>bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
 
 <!-- jvectormap -->
 <script src="<?php echo HTML_DIR; ?>plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>

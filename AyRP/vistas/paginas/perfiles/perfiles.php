@@ -187,8 +187,6 @@
   <script src="vistas/paginas/perfiles/ajax/nuevoPerfil.js"></script>
   <script src="vistas/paginas/perfiles/ajax/elegirPerfil.js"></script>
   <script src="vistas/paginas/perfiles/ajax/eliminarPerfil.js"></script>
-  <script src="vistas/paginas/perfiles/ajax/editarPerfil.js"></script>
-
    <?php
     include("vistas/paginas/general/footer.php");
   ?>

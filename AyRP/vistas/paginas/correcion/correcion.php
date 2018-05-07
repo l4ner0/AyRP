@@ -1,7 +1,6 @@
 <?php
   include("vistas/paginas/general/head.php");
 ?>
-<link rel="stylesheet" href="../../plugins/iCheck/all.css">
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
   
@@ -54,7 +53,7 @@
     <section class="container">
       <br><br>
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-xs-12 col-md-4">
           <div class="box box-primary">
             <div class="box-header with-border">
               <h3 class="box-title">Información del Simulacro</h3>
@@ -74,8 +73,8 @@
                 <div class="form-group">
                   <label for="exampleInputPassword1">Perfiles de Formulario</label>
                   <div class="form-group">
-                    <select class="form-control select2" style="width: 100%;">
-                      <option selected="selected" onclick="elaboraCartilla()">Elije un perfil</option>
+                    <select class="form-control select2" id="perfiles" onchange="elaboraCartilla()" style="width: 100%;">
+                      <option selected="selected" value="-1">Elije un perfil</option>
                       <?php
                         if(isset($_SESSION['listaPerfiles']) and $_SESSION['listaPerfiles'] != null){
 
@@ -84,7 +83,7 @@
                           
                           for($i=count($listaPerfiles)-1; $i >= 0 ; $i--){
 
-                             echo ' <option onclick="elaboraCartilla('.$listaPerfiles[$i]['id_perfil'].')">'.strtoupper($listaPerfiles[$i]['nombre_perfil']).'</option>';
+                             echo ' <option value="'.$listaPerfiles[$i]['id_perfil'].'">'.strtoupper($listaPerfiles[$i]['nombre_perfil']).'</option>';
 
                             }
                         }
@@ -97,7 +96,7 @@
             </form>
           </div>
         </div>
-        <div class="col-md-8">
+        <div class="col-xs-12 col-md-8">
           <div class="box box-primary">
             <div class="box-header with-border">
               <h3 class="box-title" id="tipoFormulario"></h3>
@@ -107,17 +106,17 @@
             <form role="form">
               <div class="box-body">
                 <div class="row">
-                  <div class="col-md-4">
+                  <div class="col-xs-12 col-md-4">
                     <div id="colm1">
                     
                     </div>
                   </div>
-                  <div class="col-md-4">
+                  <div class="col-xs-12 col-md-4">
                     <div id="colm2">
                     
                     </div>
                   </div>
-                  <div class="col-md-4">
+                  <div class="col-xs-12 col-md-4">
                     <div id="colm3">
                     
                     </div>
@@ -141,7 +140,6 @@
     include("vistas/paginas/general/footer.php");
   ?>
   <script src="vistas/paginas/correcion/ajax/mostrarPerfil.js"></script>
-  <script src="vistas/paginas/correcion/ajax/correcion.js"></script>
   <script src="<?php echo HTML_DIR; ?>plugins/iCheck/icheck.min.js"></script>
 </body>
 </html>

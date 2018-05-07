@@ -1,5 +1,8 @@
-  function elaboraCartilla(idPerfil=null){
-      if(idPerfil != null){
+  function elaboraCartilla(){
+
+      var idPerfil=document.getElementById("perfiles").value;
+
+      if(idPerfil != -1){
         var url="ajax.php?mode=elaboraCartilla";
 
         $.ajax({
@@ -20,7 +23,6 @@
             var colm1="";
             var colm2="";
             var colm3="";
-
             for(var i=0; i<cantMaterias; i++){
 
               preguntasTotales = preguntasTotales+parseInt(nPregxMat[i]);
@@ -97,7 +99,7 @@
             __("colm1").innerHTML=colm1;
             __("colm2").innerHTML=colm2;
             __("colm3").innerHTML=colm3;
-            __("botonCorrecion").innerHTML+='<button type="button"  id="cancelarClaves" class="btn btn-primary" >Cancelar</button>';
+            __("botonCorrecion").innerHTML='<button type="button"  id="cancelarClaves" class="btn btn-primary" >Cancelar</button>';
             __("botonCorrecion").innerHTML+='<button type="button"  id="btnClaveRespuesta" class="btn btn-primary pull-right" >Enviar</button>';
 
             $('input').iCheck({
@@ -113,6 +115,8 @@
         __("colm1").innerHTML="";
         __("colm2").innerHTML="";
          __("colm3").innerHTML="";
+           __("botonCorrecion").innerHTML='';
+            __("botonCorrecion").innerHTML+='';
       } 
      
   }
